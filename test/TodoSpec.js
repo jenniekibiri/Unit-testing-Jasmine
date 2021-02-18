@@ -11,6 +11,7 @@ describe('arithmetic test',function(){
         expect(addition(2,2)).toEqual(4)
     })
 it("it should multiply two number",function(){
+    
     expect(multiply(9,9)).toBe(81)
 })
 })
@@ -22,3 +23,47 @@ describe('String operations',function(){
     })
 
 })
+// example of inbuilt matchers
+// toBe,toEqual
+/**
+ * custom matchers
+ * you create custom matchers
+ * but they have to be called before any spec in the suite is executed
+*/
+//a customer matcher to validate age
+describe('This custom matcher example', function() {
+   
+   beforeEach(function() { 
+      // We should add custom matched in beforeEach() function. 
+      jasmine.addMatchers ({ 
+         validateAge: function() { 
+            return {    
+               compare: function(actual,expected) {
+                  var result = {}; 
+                  result.pass = (actual >= 13 && actual  <= 19)
+                  result.message = 'sorry u are not a teen ';
+                  return result; 
+               }   
+            };   
+         }    
+      });    
+   }); 
+    
+   it('Lets see whether u are teen or not', function() { 
+      var myAge = 11; 
+      expect(myAge).validateAge();         
+   });   
+    
+   it('Lets see whether u are teen or not ', function() { 
+      var yourAge = 18;
+      expect(yourAge).validateAge();  
+   });
+});
+
+
+
+
+
+
+
+
