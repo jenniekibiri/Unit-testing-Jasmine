@@ -99,3 +99,4 @@ describe("Example Of jasmine Spy using spyOn()", function() {
 //callthrough- call the actual function
 //return value - make the spied function return a fixed function
 //call fake -- not only does it return a value but also allow to replace the function
+// https://scriptverse.academy/ 
