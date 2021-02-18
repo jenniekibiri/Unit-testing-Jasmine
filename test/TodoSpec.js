@@ -5,3 +5,10 @@ describe("should print console statements", function(){
         expect(helloWord()).toBe("welcome ann");
     })
 })
+
+describe('arithmetic test',function(){
+    it("addition it should return the summation of two numbers",function () {
+        expect(addition(2,2)).toEqual(4)
+    })
+
+})
