@@ -18,8 +18,15 @@ it("it should multiply two number",function(){
 describe('String operations',function(){
     it("should convert a string to uppercase",function () {
         console.log(stringConv('hello'))
-
         expect(stringConv('hello my name is jenny')).toEqual('HELLO MY NAME IS JENNY')
+    })
+
+})
+
+describe('Boolean operations',function(){
+    it("should return true or false",function () {
+       expect(expectexam.exampleoftrueFalse(7)).toBeTruthy(); 
+       
     })
 
 })
@@ -50,7 +57,7 @@ describe('This custom matcher example', function() {
    }); 
     
    it('Lets see whether u are teen or not', function() { 
-      var myAge = 11; 
+      var myAge = 13; 
       expect(myAge).validateAge();         
    });   
     
